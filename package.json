@@ -1,0 +1,39 @@
+{
+  "name": "payload-plugin-resolve-alias",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "cjs/index.ts",
+  "types": "cjs/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf cjs",
+    "build": "tsc",
+    "test": "echo 'no tests'",
+    "esbuild": "esbuild ./src/index.ts --bundle --outdir=cjs --format=cjs --target=node18 --platform=node --external:react --external:axios --external:passport --external:payload --external:express-session"
+  },
+  "exports": {
+    ".": {
+      "types": "./cjs/index.d.ts",
+      "default": "./cjs/index.js"
+    },
+    "./cjs/*": "./cjs/*"
+  },
+  "files": [
+    "cjs"
+  ],
+  "devDependencies": {
+    "payload": "^1",
+    "typescript": "^4"
+  },
+  "peerDependencies": {
+    "payload": "^1"
+  },
+  "author": "Thomas Ghysels <info@thomasg.be>",
+  "homepage": "https://github.com/thgh/payload-plugin-resolve-alias",
+  "bugs": {
+    "url": "https://github.com/thgh/payload-plugin-resolve-alias/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thgh/payload-plugin-resolve-alias"
+  }
+}
