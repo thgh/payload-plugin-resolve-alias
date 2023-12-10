@@ -25,7 +25,7 @@
     "typescript": "^4"
   },
   "peerDependencies": {
-    "payload": "^1"
+    "payload": "^1 || ^2"
   },
   "author": "Thomas Ghysels <info@thomasg.be>",
   "homepage": "https://github.com/thgh/payload-plugin-resolve-alias",
